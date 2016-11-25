@@ -1,0 +1,62 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-family:'微软雅黑','Microsoft Yahei',Helvetica,Arial,Helvetica,sans-serif;font-size:100%;outline:0;background:transparent;color:#444}
+body, div,a {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select:none;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout:none;
+	-webkit-overflow-scrolling:touch;
+}
+ul, li {
+	list-style: none outside none;
+}
+html{
+	font-size: 100px;
+}
+
+body {
+	line-height: 1;
+	font-size: 16px;
+}
+
+:focus {
+	outline: 0;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	font-size: 100%;
+	background: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+input,textarea,button{
+	border:none;
+	outline:none; 
+	resize:none;
+
+	-webkit-appearance:none; 
+	appearance:none; 
+
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+
+}
+::-webkit-scrollbar{
+	display: none;
+	width:0px; 
+	height:0px;
+}
+img{
+	border: 0;
+}

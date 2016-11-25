@@ -1,0 +1,18 @@
+.js_loading{
+	width:100%;
+	height:100%;
+	background:#fff;
+	position:absolute;
+	z-index: 10;
+}
+.js_loading .js_loading_text{
+	position:absolute;
+	left:0;
+	top:50%;
+	width:100%;
+	height:0.3rem;
+	margin-top:-0.15rem;
+	text-align:center;
+
+	font-size:0.32rem;
+}
