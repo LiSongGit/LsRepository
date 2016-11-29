@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clear": "RD /S/Q public",
-    "start": "webpack --progress"
+    "start": "webpack-dev-server --config ./webpack.dev.config.js --progress"
   },
   "author": "LS",
   "license": "ISC",

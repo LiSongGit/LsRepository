@@ -10,7 +10,32 @@
 		<meta name="360-fullscreen" content="true" />
 		<meta name="format-detection" content="telephone=no" />
 		<title>手游彩-1周年庆问卷调查</title>
-	<link href="style.css" rel="stylesheet"></head>
+		<link href="style.css" rel="stylesheet">
+		<script>
+			! function(global) {
+				//适配分辨率
+				! function(n, e) {
+					var docEl = n.documentElement,
+						resizeEvt = "orientationchange" in e ? "orientationchange" : "resize",
+						recalc = function() {
+							var clientWidth = docEl.clientWidth;
+							var clinetHeight = docEl.clientHeight;
+							is4b3 = (16*clientWidth > 10*clinetHeight);
+							if (!clientWidth) {
+								return
+							}
+							docEl.style.fontSize = 100 * (clientWidth / 640) + "px";
+						};
+					if (!n.addEventListener) {
+						return
+					}
+					e.addEventListener(resizeEvt, recalc, false);
+					n.addEventListener("DOMContentLoaded", recalc, false);
+					recalc()
+				}(global.document, global);
+			}(this);
+		</script>
+	</head>
 	<body>
 		 <div id="root"></div>
 	<script type="text/javascript" src="qas.js"></script></body>

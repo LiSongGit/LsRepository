@@ -3,6 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+	devtool:'eval-source-map',
   	entry:  __dirname + "/js/main.js",//已多次提及的唯一入口文件
  	output: {
     	path: __dirname + "/public",//打包后的文件存放的地方
@@ -12,14 +13,19 @@ module.exports = {
 	    loaders: [
 	      { test: /\.json$/, loader: "json" },
 	      { test:/\.js$/, exclude:/node_modules/, loader:'babel' },
+	      { test: /\.(jpe?g|png|gif|svg)$/i, loader: [
+	      	'file?hash=sha512&digest=hex&name=[name].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        	]
+	      },
 	      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules!postcss') }
 	    ]
  	},
- 	postcss: [
+   	postcss: [
 	    require('postcss-assets')({
 	   		cachebuster: true
 	  	})
-  	],
+	],
   	plugins: [
  		//打包生成html文件到指定目录
 	 	new HtmlWebpackPlugin({template: __dirname + "/index.html"}),//new 一个这个插件的实例，并传入相关的参数
@@ -31,5 +37,13 @@ module.exports = {
 //	    new webpack.optimize.UglifyJsPlugin(),
 	    //分离CSS和JS文件
 	    new ExtractTextPlugin("style.css")
- 	]
+ 	],
+ 	devServer: {
+	    contentBase: "E:/workspace/git/qas",
+	    colors: true,
+	    historyApiFallback: true,
+	    inline: true,
+	    hot: true
+  	},
+ 	imageWebpackLoader:{}
 }

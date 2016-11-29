@@ -1,0 +1,361 @@
+.root{
+    background:inline("../img/title.png") no-repeat 0 0 #d71415;
+    background-size: 6.4rem auto;
+}
+#questionnaire_layers{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.layout1,.layout2,.layout3{
+    width:6.4rem;
+    padding-top:4.24rem;
+    margin:0 auto;
+}
+
+.topline{
+    width:6.4rem;
+    height:0.39rem;
+    background:inline("../img/bgTop.png") no-repeat 0 0;
+    background-size: 6.4rem auto;
+}
+.bottomline{
+    width:6.4rem;
+    height:0.4rem;
+    background:inline("../img/bgBtm.png") no-repeat 0 0;
+    background-size: 6.4rem auto;
+}
+.main{
+    width:6.4rem;
+    overflow: hidden;
+    background:inline("../img/bg.png") repeat-y 0 0;
+    background-size: 6.4rem auto;
+
+}
+.mainTop{
+    width:5.5rem;
+    font-size:0.24rem ;
+    line-height: 0.4rem;
+    text-indent: 2em;
+    color:#fefefe;
+    margin:0.3rem auto;
+}
+
+.question{
+    width:5.85rem;
+    margin:0 auto;
+
+}
+.question li{
+    position: relative;
+    padding-bottom: 0.1rem;
+
+}
+
+.qcBox{
+    padding-left: 0.2rem;
+    line-height: 0.4rem;
+}
+.qc{
+    font-size: 0.3rem;
+    color: #fefefe;
+}
+.yellowC{
+    color:#fddc01;
+    font-size: 0.2rem;
+}
+.btn,.btnD{
+    width: 4.5rem;
+    padding: 0.2rem 0.14rem 0.2rem 0.56rem;
+    line-height: 0.34rem;
+    font-size: 0.24rem;
+    border-radius: 0.08rem;
+    background: #ffefcb;
+    margin:0.1rem auto;
+    color:#333;
+    position: relative;
+}
+
+.cur{
+    background: #fddc01;
+    color:#dd1012;
+}
+
+.btn i,.btnD i{
+    display: block;
+    position: absolute;
+    left:0.2rem;
+    top:0.24rem;
+    width:0.26rem;
+    height:0.28rem;
+    background-image:inline("../img/btns.png");
+    background-size: 0.3rem;
+    background-position: -0.02rem -0.02rem;
+}
+.cur i{
+    background-position: -0.02rem -0.34rem;
+}
+.btnD i{
+    background-position: -0.02rem -0.68rem;
+}
+.btnD.cur i{
+    background-position: -0.02rem -0.98rem;
+
+}
+.other_answers{
+    display: block;
+    width: 4.8rem;
+    margin-left:-0.36rem;
+    margin-top:0.1rem;
+    font-size: .24rem;
+    line-height:0.34rem;
+    padding: 0.15rem 0 0.1rem;
+    background:#fddc01;
+    color: #000;
+    border:1px solid #fb1012;
+    border-radius: 0.08rem;
+}
+.other_answers:focus{
+    outline: none;
+    border:1px solid #71ccf7;
+}
+.other_answers{
+	display: none;
+}
+.cur .other_answers{
+	display: block;
+}
+.submit{
+    display: block;
+    width: 5.18rem;
+    height: 0.9rem;
+    text-align: center;
+    line-height: 0.9rem;
+    font-size: 0.45rem;
+    border-radius: 0.08rem;
+    background: #fbb729;
+    color:#fff;
+    margin: 0.3rem auto;
+    text-decoration: none;
+}
+.foot{
+    width:6.4rem;
+    height:0.52rem;
+    background:inline("../img/foot.png") no-repeat 0 0 #fff;
+    background-size:6.4rem;
+}
+/*layout1-----End*/
+
+h3{
+    height:0.3rem;
+}
+.tip{
+    width:4.5rem;
+    padding:1rem 0.5rem;
+    margin:0 auto;
+    color:#fff;
+    text-align: center;
+    font-size: 0.25rem;
+
+}
+h2{
+    color:#fff;
+    font-size: 0.3rem;
+    padding:0.2rem 0;
+
+}
+.tip p{
+    color:#fff;
+}
+/*layout2-----End*/
+.thank{
+    width:2.5rem;
+    height:2.18rem;
+    margin: 0.6rem auto 0.3rem;
+    background:inline("../img/layout3.png") no-repeat 0 0;
+    background-size: 2.5rem;
+}
+.thankP{
+    width:3.5rem;
+    margin: 0 auto 0.4rem;
+    font-size: 0.35rem;
+    line-height:0.45rem;
+    text-align: center;
+    color:#fef4a4;
+}
+/*layout3-----End*/
+
+/*showError*/
+.maskGold{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0);
+    z-index:999999999;
+}
+
+.maskBox{
+    width:5.94rem;
+    border-radius: 0.1rem;
+    background-color:rgba(0,0,0,0.8);
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-1.4rem 0 0 -2.97rem;
+}
+
+.maskwrap {
+    width: 5.94rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.maskTxt p{
+    width: 4.54rem;
+    padding: 0.35rem;
+    font-size: 0.3rem;
+    line-height: 0.35rem;
+    word-wrap: break-word;
+    word-break: normal;
+    color: #fef72c;
+    text-align: center;
+}
+
+.maskBtn {
+    display: block;
+    width: 2.32rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin:0.3rem 1.46rem;
+    margin-top:0;
+    font-size: 0.34rem;
+    text-decoration: none;
+    background: #fdf983;
+    border-radius: 0.05rem;
+    color: #000;
+    text-align: center;
+}
+/*showError-end*/
+#qaMsg .maskBox,#qaMsg .maskTxt,#qaMsg .maskTxt p{
+    color:#fff;
+}
+/* ��¼ */
+.phoneNumDiv{
+	width:5.6rem;
+	height:0.92rem;
+	margin:0.3rem auto;
+}
+
+.inpNum{
+	float:left;
+	width:5.4rem;
+	height:0.5rem;
+	border:1px solid #f89827;
+	border-radius:6px;
+	background:none;
+	font-size:0.3rem;
+	color:#fff;
+	/* line-height:0.68rem; */
+	padding-left:0.2rem;
+	padding-top:0.2rem;
+	padding-bottom:0.2rem;
+}
+
+.inpNum:focus{
+	outline:none;
+}
+
+.mustWrite{
+	float:right;
+	font-size:0.2rem;
+	color:#FEBD2D;
+	line-height:0.7rem;
+	width:1.1rem;
+	/* margin-left:0.15rem; */
+}
+
+.checkCodeDiv{
+	width:5.6rem;
+	height:0.92rem;
+    margin:0.22rem auto;
+}
+
+.checkCodeDivIn{
+	width:5.6rem;
+	height:0.92rem;
+}
+
+.codeNum{
+	float:left;
+	width:3.5rem;
+    height:0.5rem;
+    border:1px solid #f89827;
+    border-radius:6px;
+	background:none;
+	font-size:0.3rem;
+	color:#fff;
+	/* line-height:0.68rem; */
+	padding-left:0.2rem;
+	padding-top:0.2rem;
+	padding-bottom:0.2rem;
+}
+
+.codeNum:focus{
+	outline:none;
+}
+
+.checkCode{
+	float:right;
+	width:1.5rem;
+	height:0.86rem;
+	margin-top:0.06rem;
+	background:white;
+	margin-left:0.2rem;
+}
+
+.writeWrong{
+	float:right;
+	font-size:0.2rem;
+	color:#FEBD2D;
+	line-height:0.7rem;
+	width:1.1rem;
+	/* margin-left:0.15rem; */
+}
+.maskBtnQa{
+    display: block;
+    width: 4.74rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    margin: 0.3rem auto;
+    font-size: 0.36rem;
+    text-decoration: none;
+    background: #f8a929;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+}
+.closeQa{
+	position:absolute;
+    right: 0.15rem;
+    top:0.2rem;
+    width:0.58rem;
+    height:0.58rem;
+    background: inline("../img/close.png") no-repeat 0 0;
+    background-size: 0.58rem;
+
+}
+@media screen and (min-aspect-ratio: 320/568) and (max-aspect-ratio: 320/496){
+	.layout3 .foot{
+		bottom: 0;
+		position: absolute;
+	}
+}
+@media screen and (min-aspect-ratio: 320/568) and (max-aspect-ratio: 320/437){
+	.layout2 .foot{
+		bottom: 0;
+		position: absolute;
+	}
+}

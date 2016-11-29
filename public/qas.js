@@ -64,7 +64,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0dcfef13f294ad979384"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9da65e8738be18f2479b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -598,15 +598,33 @@
 
 	var _NetLoading2 = _interopRequireDefault(_NetLoading);
 
-	__webpack_require__(341);
+	var _PageOne = __webpack_require__(341);
+
+	var _PageOne2 = _interopRequireDefault(_PageOne);
+
+	var _PageTwo = __webpack_require__(346);
+
+	var _PageTwo2 = _interopRequireDefault(_PageTwo);
+
+	__webpack_require__(347);
+
+	var _qa = __webpack_require__(344);
+
+	var _qa2 = _interopRequireDefault(_qa);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _reactDom.render)(_react2.default.createElement(
 		'div',
-		null,
+		{ className: _qa2.default.root },
 		_react2.default.createElement(_Loading2.default, null),
-		_react2.default.createElement(_NetLoading2.default, null)
+		_react2.default.createElement(_NetLoading2.default, null),
+		_react2.default.createElement(
+			'div',
+			{ id: 'questionnaire_layers', style: { "display": "block" } },
+			_react2.default.createElement(_PageOne2.default, null),
+			_react2.default.createElement(_PageTwo2.default, null)
+		)
 	), document.getElementById('root'));
 
 /***/ },
@@ -22319,7 +22337,7 @@
 	};
 
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-		filename: 'E:/workspace/git/react-demos/qas/js/Loading.js',
+		filename: 'E:/workspace/git/qas/js/Loading.js',
 		components: _components,
 		locals: [module],
 		imports: [_react3.default]
@@ -22345,7 +22363,7 @@
 			value: function render() {
 				return _react3.default.createElement(
 					'div',
-					{ className: _style2.default.js_loading },
+					{ className: _style2.default.js_loading, style: { "display": "none" } },
 					_react3.default.createElement(
 						'div',
 						{ className: _style2.default.js_loading_text },
@@ -27991,7 +28009,7 @@
 	};
 
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-		filename: 'E:/workspace/git/react-demos/qas/js/NetLoading.js',
+		filename: 'E:/workspace/git/qas/js/NetLoading.js',
 		components: _components,
 		locals: [module],
 		imports: [_react3.default]
@@ -28054,6 +28072,1458 @@
 /***/ },
 /* 340 */,
 /* 341 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react2 = __webpack_require__(1);
+
+	var _react3 = _interopRequireDefault(_react2);
+
+	var _reactTransformHmr3 = __webpack_require__(185);
+
+	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _qa_app = __webpack_require__(342);
+
+	var _qa_app2 = _interopRequireDefault(_qa_app);
+
+	var _qa_o2o = __webpack_require__(343);
+
+	var _qa_o2o2 = _interopRequireDefault(_qa_o2o);
+
+	var _qa = __webpack_require__(344);
+
+	var _qa2 = _interopRequireDefault(_qa);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _components = {
+		PageOne: {
+			displayName: 'PageOne'
+		}
+	};
+
+	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
+		filename: 'E:/workspace/git/qas/js/PageOne.js',
+		components: _components,
+		locals: [module],
+		imports: [_react3.default]
+	});
+
+	function _wrapComponent(id) {
+		return function (Component) {
+			return _reactTransformHmr2(Component, id);
+		};
+	}
+
+	var PageOne = _wrapComponent('PageOne')(function (_Component) {
+		_inherits(PageOne, _Component);
+
+		function PageOne() {
+			_classCallCheck(this, PageOne);
+
+			return _possibleConstructorReturn(this, (PageOne.__proto__ || Object.getPrototypeOf(PageOne)).apply(this, arguments));
+		}
+
+		_createClass(PageOne, [{
+			key: 'createInputDom',
+			value: function createInputDom() {
+				return _react3.default.createElement('input', { className: _qa2.default.other_answers, disabled: 'true', type: 'text', maxlength: '100', placeholder: '', autocomplete: 'off' });
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var createInputDom = this.createInputDom.bind(this);
+				var resultsList = _qa_app2.default.results.map(function (questions) {
+					var len = questions.questions.length;
+					var styl = questions.max_sel_count == 1 ? _qa2.default.btn : _qa2.default.btnD;
+
+					var itemList = questions.questions.map(function (item, itemIdx) {
+						var inputDom;
+						if (item.item.indexOf("其他") > -1 && itemIdx == len - 1) {
+							inputDom = createInputDom();
+						}
+						return _react3.default.createElement(
+							'div',
+							{ className: styl, value: item.value, onClick: 'onClick()' },
+							_react3.default.createElement('i', null),
+							item.item,
+							inputDom
+						);
+					});
+					return _react3.default.createElement(
+						'li',
+						{ key: questions.idx, val: questions.idx },
+						_react3.default.createElement(
+							'div',
+							{ className: _qa2.default.qcBox, max_sel_count: questions.max_sel_count },
+							_react3.default.createElement(
+								'span',
+								{ className: _qa2.default.qc },
+								questions.title
+							),
+							_react3.default.createElement(
+								'span',
+								{ className: _qa2.default.yellowC },
+								questions.title_rule
+							)
+						),
+						itemList
+					);
+				});
+				return _react3.default.createElement(
+					'div',
+					{ className: (_qa2.default.layout, _qa2.default.layout1) },
+					_react3.default.createElement('div', { className: _qa2.default.topline }),
+					_react3.default.createElement(
+						'div',
+						{ className: _qa2.default.main },
+						_react3.default.createElement('p', { className: _qa2.default.mainTop }),
+						_react3.default.createElement(
+							'ul',
+							{ id: _qa2.default.resultsContainer, className: _qa2.default.question },
+							resultsList
+						)
+					),
+					_react3.default.createElement('div', { className: (_qa2.default.bgImg, _qa2.default.bottomline) }),
+					_react3.default.createElement(
+						'a',
+						{ href: 'javascript:;', className: _qa2.default.submit },
+						'\u63D0\u4EA4'
+					),
+					_react3.default.createElement('div', { className: _qa2.default.foot })
+				);
+			}
+		}]);
+
+		return PageOne;
+	}(_react2.Component));
+
+	exports.default = PageOne;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(184)(module)))
+
+/***/ },
+/* 342 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"results": [
+			{
+				"idx": 1,
+				"title": "1.性别",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.男性",
+						"value": 1
+					},
+					{
+						"item": "B.女性",
+						"value": 2
+					}
+				]
+			},
+			{
+				"idx": 2,
+				"title": "2.年龄",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.20-25岁",
+						"value": 1
+					},
+					{
+						"item": "B.25-30岁",
+						"value": 2
+					},
+					{
+						"item": "C.30-39岁",
+						"value": 3
+					},
+					{
+						"item": "D.40-49岁",
+						"value": 4
+					},
+					{
+						"item": "E.50-59岁",
+						"value": 5
+					},
+					{
+						"item": "F.60岁及以上",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 3,
+				"title": "3.受教育程度",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.初中",
+						"value": 1
+					},
+					{
+						"item": "B.高中",
+						"value": 2
+					},
+					{
+						"item": "C.大专/本科",
+						"value": 3
+					},
+					{
+						"item": "D.研究生及以上",
+						"value": 4
+					}
+				]
+			},
+			{
+				"idx": 4,
+				"title": "4.所从事职业",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.学生",
+						"value": 1
+					},
+					{
+						"item": "B.公司职员",
+						"value": 2
+					},
+					{
+						"item": "C.高级管理人员",
+						"value": 3
+					},
+					{
+						"item": "D.私营业主",
+						"value": 4
+					},
+					{
+						"item": "E.公务员",
+						"value": 5
+					},
+					{
+						"item": "F.自由职业",
+						"value": 6
+					},
+					{
+						"item": "G.体力劳动",
+						"value": 7
+					},
+					{
+						"item": "H.无业",
+						"value": 8
+					},
+					{
+						"item": "I.退休",
+						"value": 9
+					},
+					{
+						"item": "J．其他",
+						"value": 10
+					}
+				]
+			},
+			{
+				"idx": 5,
+				"title": "5.您的年收入",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.3万元以下",
+						"value": 1
+					},
+					{
+						"item": "B.3-5万元",
+						"value": 2
+					},
+					{
+						"item": "C.5-10万元",
+						"value": 3
+					},
+					{
+						"item": "D.10-15万元",
+						"value": 4
+					},
+					{
+						"item": "E．15万元以上",
+						"value": 5
+					}
+				]
+			},
+			{
+				"idx": 6,
+				"title": "6.目前所在城市属于",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.南京",
+						"value": 1
+					},
+					{
+						"item": "B.无锡",
+						"value": 2
+					},
+					{
+						"item": "C.徐州",
+						"value": 3
+					},
+					{
+						"item": "D.常州",
+						"value": 4
+					},
+					{
+						"item": "E.苏州",
+						"value": 5
+					},
+					{
+						"item": "F.南通",
+						"value": 6
+					},
+					{
+						"item": "G.连云港",
+						"value": 7
+					},
+					{
+						"item": "H.淮安",
+						"value": 8
+					},
+					{
+						"item": "I.盐城",
+						"value": 9
+					},
+					{
+						"item": "J.扬州",
+						"value": 10
+					},
+					{
+						"item": "K.镇江",
+						"value": 11
+					},
+					{
+						"item": "L.泰州",
+						"value": 12
+					},
+					{
+						"item": "M.宿迁",
+						"value": 13
+					}
+				]
+			},
+			{
+				"idx": 7,
+				"title": "7.您购买手游彩的时间大约",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.一个月",
+						"value": 1
+					},
+					{
+						"item": "B.二个月",
+						"value": 2
+					},
+					{
+						"item": "C.三个月",
+						"value": 3
+					},
+					{
+						"item": "D.四个月",
+						"value": 4
+					},
+					{
+						"item": "E.五个月",
+						"value": 5
+					},
+					{
+						"item": "F.超过半年",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 8,
+				"title": "8.您购买手游彩的频率是",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.几乎天天玩",
+						"value": 1
+					},
+					{
+						"item": "B.每周买几次",
+						"value": 2
+					},
+					{
+						"item": "C.每个月买几次",
+						"value": 3
+					},
+					{
+						"item": "D.节假日购买",
+						"value": 4
+					},
+					{
+						"item": "E.较为随意，说不准",
+						"value": 5
+					}
+				]
+			},
+			{
+				"idx": 9,
+				"title": "9.您每月平均购买手游彩的金额是",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.100元以下",
+						"value": 1
+					},
+					{
+						"item": "B.100-200元",
+						"value": 2
+					},
+					{
+						"item": "C.200-400元",
+						"value": 3
+					},
+					{
+						"item": "D.400-600元",
+						"value": 4
+					},
+					{
+						"item": "E.600-800元",
+						"value": 5
+					},
+					{
+						"item": "F800元以上",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 10,
+				"title": "10.关于手游彩，您最看重的是",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.购买彩票的便利性",
+						"value": 1
+					},
+					{
+						"item": "B.中奖兑奖的及时性",
+						"value": 2
+					},
+					{
+						"item": "C.减少纸张的环保性",
+						"value": 3
+					},
+					{
+						"item": "D．新型游戏的趣味性",
+						"value": 4
+					},
+					{
+						"item": "E．官方机构的权威性",
+						"value": 5
+					},
+					{
+						"item": "F.个人手机购买的安全性",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 11,
+				"title": "11.您是通过哪种渠道了解到手游彩的",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.江苏体彩官方网站、微信公众号",
+						"value": 1
+					},
+					{
+						"item": "B.周围同事、朋友、熟人的推荐",
+						"value": 2
+					},
+					{
+						"item": "C.电视广告",
+						"value": 3
+					},
+					{
+						"item": "D.网络广告",
+						"value": 4
+					},
+					{
+						"item": "E.报纸广告",
+						"value": 5
+					},
+					{
+						"item": "F.户外广告",
+						"value": 6
+					},
+					{
+						"item": "G.电台广播",
+						"value": 7
+					},
+					{
+						"item": "H.媒体新闻",
+						"value": 8
+					},
+					{
+						"item": "I.现场促销活动",
+						"value": 9
+					},
+					{
+						"item": "J．搜索引擎",
+						"value": 10
+					},
+					{
+						"item": "K．APP下载市场",
+						"value": 11
+					},
+					{
+						"item": "L．体彩站点",
+						"value": 12
+					},
+					{
+						"item": "M．其他：",
+						"value": 13
+					}
+				]
+			},
+			{
+				"idx": 12,
+				"title": "12.以下描述，哪些是您经常玩手游彩的场景",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.在家中空闲时",
+						"value": 1
+					},
+					{
+						"item": "B.在乘坐汽车、公交、地铁时",
+						"value": 2
+					},
+					{
+						"item": "C.在排队等候时",
+						"value": 3
+					},
+					{
+						"item": "D.在办公场所空闲时",
+						"value": 4
+					},
+					{
+						"item": "E.在吃饭、聚会时",
+						"value": 5
+					},
+					{
+						"item": "F.在外出休闲旅游、购物时",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 13,
+				"title": "13.最近三个月内，您平均每月手机或网络购物的频率（除购买彩票外）（单选）",
+				"title_rule": "（除购买彩票外）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.1次及以下",
+						"value": 1
+					},
+					{
+						"item": "B．2-3次",
+						"value": 2
+					},
+					{
+						"item": "C．4-5次",
+						"value": 3
+					},
+					{
+						"item": "D．5次及以上",
+						"value": 4
+					}
+				]
+			},
+			{
+				"idx": 14,
+				"title": "14.您觉得手游彩与传统彩票最大的区别是什么",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.手游彩玩法更加新颖，在传统销售点无法买到",
+						"value": 1
+					},
+					{
+						"item": "B.选择投注的金额更加灵活",
+						"value": 2
+					},
+					{
+						"item": "C.足不出户即可购买彩票，无时间及场地限制",
+						"value": 3
+					},
+					{
+						"item": "D.通过电子方式购买更为便捷，不用现金交易",
+						"value": 4
+					},
+					{
+						"item": "E.实名购买，不担心丢失彩票或忘记兑奖",
+						"value": 5
+					},
+					{
+						"item": "F.手机投注，更为安全，隐私更有保密性",
+						"value": 6
+					},
+					{
+						"item": "G.大家都在玩手游彩，感觉更加时尚",
+						"value": 7
+					},
+					{
+						"item": "H.开奖速度快、游戏节奏感紧凑",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 15,
+				"title": "15.您怎样看待手游彩的每日限额",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.十分必要的措施",
+						"value": 1
+					},
+					{
+						"item": "B.额度合适，有助于理性购彩",
+						"value": 2
+					},
+					{
+						"item": "C．限额过低，对购买积极性有一定影响",
+						"value": 3
+					},
+					{
+						"item": "D．无所谓，很少达到限额",
+						"value": 4
+					},
+					{
+						"item": "E.希望适当放开每日额度",
+						"value": 5
+					},
+					{
+						"item": "F．彩民经济能力各不相同，应分别对待",
+						"value": 6
+					},
+					{
+						"item": "G.希望更加灵活对待，额度可以累积使用",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 16,
+				"title": "16.您参与过手游彩的哪些营销活动",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.注册送红包",
+						"value": 1
+					},
+					{
+						"item": "B.充值送红包",
+						"value": 2
+					},
+					{
+						"item": "C.推荐好友送红包",
+						"value": 3
+					},
+					{
+						"item": "D.定点抢红包",
+						"value": 4
+					},
+					{
+						"item": "E.签到送红包",
+						"value": 5
+					},
+					{
+						"item": "F．月度促销活动",
+						"value": 6
+					},
+					{
+						"item": "G．均未参与过",
+						"value": 7
+					}
+				]
+			},
+			{
+				"idx": 17,
+				"title": "17.以下选项，哪些是您参与活动的主要原因",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.希望通过自己努力，获得奖品",
+						"value": 1
+					},
+					{
+						"item": "B.希望通过运气成分，获得奖品",
+						"value": 2
+					},
+					{
+						"item": "C.只要参与，就能获得奖品",
+						"value": 3
+					},
+					{
+						"item": "D.可以通过活动，证明自己实力",
+						"value": 4
+					},
+					{
+						"item": "E.活动形式新颖，喜欢体验一下",
+						"value": 5
+					},
+					{
+						"item": "F．活动规则简单，容易参与",
+						"value": 6
+					},
+					{
+						"item": "G．重在参与，有没有奖品无所谓",
+						"value": 7
+					}
+				]
+			},
+			{
+				"idx": 18,
+				"title": "18.您对手游彩产品的评价和感受",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.不仅休闲娱乐，还为国家公益做贡献",
+						"value": 1
+					},
+					{
+						"item": "B.填补空闲时间的新娱乐方式",
+						"value": 2
+					},
+					{
+						"item": "C.满足个人精神需要，还能排解压力",
+						"value": 3
+					},
+					{
+						"item": "D.相比去彩票店购买，手游彩更为便利",
+						"value": 4
+					},
+					{
+						"item": "E.游戏形式绿色健康，无纸化彩票节能环保",
+						"value": 5
+					},
+					{
+						"item": "F．游戏趣味性强，互动体验好",
+						"value": 6
+					},
+					{
+						"item": "G．对传统彩票玩法和购买方式的有益补充",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 19,
+				"title": "19.您最希望手游彩在哪些方面加强和改进",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.游戏趣味性",
+						"value": 1
+					},
+					{
+						"item": "B.游戏画面和音效",
+						"value": 2
+					},
+					{
+						"item": "C.增加新游戏",
+						"value": 3
+					},
+					{
+						"item": "D．增加其他传统彩票玩法",
+						"value": 4
+					},
+					{
+						"item": "E.使用流程优化",
+						"value": 5
+					},
+					{
+						"item": "F.客户端增加新功能",
+						"value": 6
+					},
+					{
+						"item": "G．客户服务",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			}
+		]
+	};
+
+/***/ },
+/* 343 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"results": [
+			{
+				"idx": 1,
+				"title": "1.性别",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.男性",
+						"value": 1
+					},
+					{
+						"item": "B.女性",
+						"value": 2
+					}
+				]
+			},
+			{
+				"idx": 2,
+				"title": "2.年龄",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.20-25岁",
+						"value": 1
+					},
+					{
+						"item": "B.25-30岁",
+						"value": 2
+					},
+					{
+						"item": "C.30-39岁",
+						"value": 3
+					},
+					{
+						"item": "D.40-49岁",
+						"value": 4
+					},
+					{
+						"item": "E.50-59岁",
+						"value": 5
+					},
+					{
+						"item": "F.60岁及以上",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 3,
+				"title": "3.受教育程度",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.初中",
+						"value": 1
+					},
+					{
+						"item": "B.高中",
+						"value": 2
+					},
+					{
+						"item": "C.大专/本科",
+						"value": 3
+					},
+					{
+						"item": "D.研究生及以上",
+						"value": 4
+					}
+				]
+			},
+			{
+				"idx": 4,
+				"title": "4.您彩票店的年收入",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.3万元以下",
+						"value": 1
+					},
+					{
+						"item": "B.3-5万元",
+						"value": 2
+					},
+					{
+						"item": "C.5-10万元",
+						"value": 3
+					},
+					{
+						"item": "D.10-15万元",
+						"value": 4
+					},
+					{
+						"item": "E．15万元以上",
+						"value": 5
+					}
+				]
+			},
+			{
+				"idx": 5,
+				"title": "5.目前所在城市属于",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.南京",
+						"value": 1
+					},
+					{
+						"item": "B.无锡",
+						"value": 2
+					},
+					{
+						"item": "C.徐州",
+						"value": 3
+					},
+					{
+						"item": "D.常州",
+						"value": 4
+					},
+					{
+						"item": "E.苏州",
+						"value": 5
+					},
+					{
+						"item": "F.南通",
+						"value": 6
+					},
+					{
+						"item": "G.连云港",
+						"value": 7
+					},
+					{
+						"item": "H.淮安",
+						"value": 8
+					},
+					{
+						"item": "I.盐城",
+						"value": 9
+					},
+					{
+						"item": "J.扬州",
+						"value": 10
+					},
+					{
+						"item": "K.镇江",
+						"value": 11
+					},
+					{
+						"item": "L.泰州",
+						"value": 12
+					},
+					{
+						"item": "M.宿迁",
+						"value": 13
+					}
+				]
+			},
+			{
+				"idx": 6,
+				"title": "6.您推广手游彩的时间大约",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.一个月",
+						"value": 1
+					},
+					{
+						"item": "B.二个月",
+						"value": 2
+					},
+					{
+						"item": "C.三个月",
+						"value": 3
+					},
+					{
+						"item": "D.四个月",
+						"value": 4
+					},
+					{
+						"item": "E.五个月",
+						"value": 5
+					},
+					{
+						"item": "F.超过半年",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 7,
+				"title": "7.截止到现在，您推广的手游彩用户数量为",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.0-10人",
+						"value": 1
+					},
+					{
+						"item": "B.10-20人",
+						"value": 2
+					},
+					{
+						"item": "C.20-50人",
+						"value": 3
+					},
+					{
+						"item": "D．50人以上",
+						"value": 4
+					}
+				]
+			},
+			{
+				"idx": 8,
+				"title": "8.由您推广的手游彩用户，每个用户每月平均消费金额是",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.100元以下",
+						"value": 1
+					},
+					{
+						"item": "B.100-200元",
+						"value": 2
+					},
+					{
+						"item": "C.200-400元",
+						"value": 3
+					},
+					{
+						"item": "D.400-600元",
+						"value": 4
+					},
+					{
+						"item": "E.600-800元",
+						"value": 5
+					},
+					{
+						"item": "F.800元以上",
+						"value": 6
+					}
+				]
+			},
+			{
+				"idx": 9,
+				"title": "9.您是通过哪种方式，向用户推荐手游彩",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.店内张贴海报、宣传品",
+						"value": 1
+					},
+					{
+						"item": "B.推荐周围亲戚、朋友、熟人注册",
+						"value": 2
+					},
+					{
+						"item": "C.派发宣传单",
+						"value": 3
+					},
+					{
+						"item": "D.微信朋友圈",
+						"value": 4
+					},
+					{
+						"item": "E.电话、短信",
+						"value": 5
+					},
+					{
+						"item": "F.向店内彩民介绍",
+						"value": 6
+					},
+					{
+						"item": "G.经其他人介绍",
+						"value": 7
+					},
+					{
+						"item": "H.其他：",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 10,
+				"title": "10.您觉得手游彩与传统彩票最大的区别是什么",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.手游彩玩法更加新颖，在传统销售点无法买到",
+						"value": 1
+					},
+					{
+						"item": "B.选择投注的金额更加灵活",
+						"value": 2
+					},
+					{
+						"item": "C.足不出户即可购买彩票，无时间及场地限制",
+						"value": 3
+					},
+					{
+						"item": "D.通过电子方式购买更为便捷，不用现金交易",
+						"value": 4
+					},
+					{
+						"item": "E.实名购买，不担心丢失彩票或忘记兑奖",
+						"value": 5
+					},
+					{
+						"item": "F.手机投注，更为安全，隐私更有保密性",
+						"value": 6
+					},
+					{
+						"item": "G.大家都在玩手游彩，感觉更加时尚",
+						"value": 7
+					},
+					{
+						"item": "H.开奖速度快、游戏节奏感紧凑",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 11,
+				"title": "12.您怎样看待手游彩的每日限额",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.十分必要的措施",
+						"value": 1
+					},
+					{
+						"item": "B.额度合适，有助于理性购彩",
+						"value": 2
+					},
+					{
+						"item": "C．限额过低，对购买积极性有一定影响",
+						"value": 3
+					},
+					{
+						"item": "D．无所谓，很少达到限额",
+						"value": 4
+					},
+					{
+						"item": "E.希望适当放开每日额度",
+						"value": 5
+					},
+					{
+						"item": "F．彩民经济能力各不相同，应分别对待",
+						"value": 6
+					},
+					{
+						"item": "G.希望灵活调整，额度可以累积使用",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 12,
+				"title": "13.您对手游彩产品的评价和感受",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.不仅休闲娱乐，还为国家公益做贡献",
+						"value": 1
+					},
+					{
+						"item": "B.填补空闲时间的新娱乐方式",
+						"value": 2
+					},
+					{
+						"item": "C.满足个人精神需要，还能排解压力",
+						"value": 3
+					},
+					{
+						"item": "D.相比去彩票店购买，手游彩更加便利",
+						"value": 4
+					},
+					{
+						"item": "E.游戏形式绿色健康，无纸化彩票节能环保",
+						"value": 5
+					},
+					{
+						"item": "F．游戏趣味性强，互动体验好",
+						"value": 6
+					},
+					{
+						"item": "G．传统彩票玩法和购买方式的有益补充",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			},
+			{
+				"idx": 13,
+				"title": "14.在产品方面，您怎样评价手游彩和传统彩票",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.产品不同，没有竞争关系",
+						"value": 1
+					},
+					{
+						"item": "B.与传统玩法相似",
+						"value": 2
+					}
+				]
+			},
+			{
+				"idx": 14,
+				"title": "15.手游彩是否影响传统彩票销量",
+				"title_rule": "（单选）",
+				"max_sel_count": 1,
+				"questions": [
+					{
+						"item": "A.不会",
+						"value": 1
+					},
+					{
+						"item": "B.会",
+						"value": 2
+					},
+					{
+						"item": "C．现在还不好评价",
+						"value": 3
+					}
+				]
+			},
+			{
+				"idx": 15,
+				"title": "16.在推广手游彩过程中，您遇到了哪些问题",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.不知道如何辅导用户下载安装",
+						"value": 1
+					},
+					{
+						"item": "B.需要实名注册，用户由于隐私问题放弃",
+						"value": 2
+					},
+					{
+						"item": "C.推荐码填写不方便",
+						"value": 3
+					},
+					{
+						"item": "D.下载后，用户手机无法安装",
+						"value": 4
+					},
+					{
+						"item": "E.没有无线网络，手机流量不够用",
+						"value": 5
+					},
+					{
+						"item": "F．用户缺乏对产品信任",
+						"value": 6
+					},
+					{
+						"item": "G．用户对手游彩不感兴趣",
+						"value": 7
+					},
+					{
+						"item": "H．用户因银行卡问题无法注册",
+						"value": 8
+					},
+					{
+						"item": "I．其他",
+						"value": 9
+					}
+				]
+			},
+			{
+				"idx": 16,
+				"title": "17.您最希望手游彩在哪些方面加强和改进",
+				"title_rule": "（最多可选3项）",
+				"max_sel_count": 3,
+				"questions": [
+					{
+						"item": "A.游戏趣味性",
+						"value": 1
+					},
+					{
+						"item": "B.游戏画面和音效",
+						"value": 2
+					},
+					{
+						"item": "C.增加新游戏",
+						"value": 3
+					},
+					{
+						"item": "D．增加其他传统彩票玩法",
+						"value": 4
+					},
+					{
+						"item": "E.使用流程",
+						"value": 5
+					},
+					{
+						"item": "F.客户端增加新功能",
+						"value": 6
+					},
+					{
+						"item": "G．客户服务",
+						"value": 7
+					},
+					{
+						"item": "H．其他",
+						"value": 8
+					}
+				]
+			}
+		]
+	};
+
+/***/ },
+/* 344 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"root":"_2VR8ZIxn8zV42MneFhpNQC","questionnaire_layers":"_1INYz8f6OT69S0uJ6zObQ2","layout1":"_1axqV-0perbRPok_OPgUfq","layout2":"_1sYAQ2lgntfUbUMsnFISKj","layout3":"_5xejKN25BAurDwWXkmJaj","topline":"ELod0__FSlSPMjuZFJMRg","bottomline":"_25_8NcVbHcxavdovYXDKrd","main":"p2ZHCm9J1CWZkFrLO2YG4","mainTop":"_3G3L1jEkumsFfV4d7X9b8U","question":"_33O7_mkoXFYGnIJaml16aT","qcBox":"xBF4ba3Xj8SLNcsDw-6Bl","qc":"_1e1PMk7bq-Or6EV_7Ral-w","yellowC":"_190snKdtjItFBqjU46ly5w","btn":"_2cesnxtitWMlSGikteJ7JF","btnD":"_3QGf9E4Qz50vjI2NBszP0O","cur":"_1W3eTfQu8fSr9kRzR29I63","other_answers":"_3xwJ-6zCAn4yR0jiBwQ4Vi","submit":"_37Hb8iYqiO1UoeMjqwdkDx","foot":"_1LQ1xQ4waaMxe8GfOD2Vzs","tip":"_1Cq9B3G9sTk6yFgzhp3dTx","thank":"_3Z9GzjGynxFh1pF-oF9Hy4","thankP":"_3rTRpDriZWyBKSOysdKWdu","maskGold":"_38Ps78AnIm5RKvSjuYDpDD","maskBox":"_1A-thEAqCeqMTCXYcCJeAg","maskwrap":"dJomsw1dvCYQDwUHAn2xg","maskTxt":"_21r6xPKv96AdSAhSe9-I5d","maskBtn":"_3nphYgM0SKEHU8oSyKDB8S","qaMsg":"_1IU5fdz9-OhQACR4_-rPEn","phoneNumDiv":"g61MFR2ecb5ZyjIDsLCrn","inpNum":"iUIoScYRm9m0WU--kHefM","mustWrite":"_1W8H0Ou7Sk5Yk-IRzNjcnN","checkCodeDiv":"_2kbBEoWrb1OfUA_yfNnlXw","checkCodeDivIn":"_2bZvbGpfX7LkZOsXgFqgyr","codeNum":"GSTrOh5McehoxOe2cwEdj","checkCode":"_3_QwZ1RH0BF-l0ezchRkZs","writeWrong":"_35nuv41gI9jXuIT064NdTN","maskBtnQa":"_3bh3ovxzJPNyAdO7icRubh","closeQa":"_1AGtoABGUaRPTPfXcIlRZD"};
+
+/***/ },
+/* 345 */,
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react2 = __webpack_require__(1);
+
+	var _react3 = _interopRequireDefault(_react2);
+
+	var _reactTransformHmr3 = __webpack_require__(185);
+
+	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _qa = __webpack_require__(344);
+
+	var _qa2 = _interopRequireDefault(_qa);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _components = {
+		PageTwo: {
+			displayName: 'PageTwo'
+		}
+	};
+
+	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
+		filename: 'E:/workspace/git/qas/js/PageTwo.js',
+		components: _components,
+		locals: [module],
+		imports: [_react3.default]
+	});
+
+	function _wrapComponent(id) {
+		return function (Component) {
+			return _reactTransformHmr2(Component, id);
+		};
+	}
+
+	var PageTwo = _wrapComponent('PageTwo')(function (_Component) {
+		_inherits(PageTwo, _Component);
+
+		function PageTwo() {
+			_classCallCheck(this, PageTwo);
+
+			return _possibleConstructorReturn(this, (PageTwo.__proto__ || Object.getPrototypeOf(PageTwo)).apply(this, arguments));
+		}
+
+		_createClass(PageTwo, [{
+			key: 'render',
+			value: function render() {
+				return null;
+			}
+		}]);
+
+		return PageTwo;
+	}(_react2.Component));
+
+	exports.default = PageTwo;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(184)(module)))
+
+/***/ },
+/* 347 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
